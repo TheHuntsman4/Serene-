@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/main.css">
     <title>Serene</title>
 </head>
 <body>
-    This is the main page of the app
-    This is a test for the css 
+  <header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#"><img src="../assets/Serene User Workflow.png" alt="Serene Logo"></a>
+        </div>
+        <div class="navbar">
+            <div class="close-nav"><button>×</button></div>
+            <nav>
+                <ul>
+                    <li><a href="#">Journal</a></li>
+                    <li><a href="#">A1ctivities</a></li>
+                    <li><a href="#">Videos and  Articles</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu-bar">
+            <button><i></i></button>
+        </div>
+    </div>
+</header>
+<div class="main-container">
+      <div class="greeting-card">
+            Hello, Serene
+        <br>
+          How are you feeling today?
+
+      </div>
+      <div class="content-card" style="background-color: #FFB04E;">
+        How are you feeling today?<br>
+        Track your mood and discover patterns and Let your thoughts flow ...
+
+        <lottie-player
+  src="https://lottie.host/77d62b6a-07fb-44d3-99e6-7c5e695be05c/tYQfRu2fAb.json"
+  background="transparent"
+  speed="1"
+  style="width: 300px; height: 300px"
+  direction="1"
+  mode="normal"
+  controls
+  autoplay
+></lottie-player>
+      </div>
+      <div class="content-card" style="background-color: #A4C3B2;">
+        Find your inner balance through mindful activities...
+      </div>
+      <div class="content-card" style="background-color: #C3E4FF;">
+        Delve into a wealth of resources for a healthier mind...
+      </div>
+</div>
+<script src=“https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js”></script>    
+<script src="../scripts/script.js"></script> 
 </body>
 </html>

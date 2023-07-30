@@ -1,9 +1,244 @@
-*{
-    margin: 0 0 0 0;
-}
-
-body{
+body{ 
     color: #000000;
+    /* background-image: url("../assets/_.jpeg"); */
+    margin: 0 10px 0 10px;
     background-color: #E4D7EE;
+    background-repeat: no-repeat;
 
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    line-height: 1.5em;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+header {
+    box-shadow: 0 10px 15px -3px 
+rgba(0, 0, 0, 0.1),
+        0 4px 6px -4px 
+rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+header .wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: 
+white;
+    padding: 20px;
+    transition: left 0.3s;
+}
+
+.navbar.show {
+    left: 0 !important;
+}
+
+.hide-scroll {
+    overflow: hidden;
+}
+
+.navbar ul {
+    all: unset;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+.navbar ul a {
+    all: unset;
+    color: 
+#444444;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 28px;
+}
+.navbar ul a:hover {
+    color: 
+#111111;
+    text-decoration: underline overline;
+    text-decoration-thickness: 3px;
+}
+
+.close-nav {
+    text-align: right;
+    margin-bottom: 20px;
+}
+.close-nav button {
+    all: unset;
+    background: 
+#f7f7f7;
+    font-size: 42px;
+    cursor: pointer;
+    border: 1px solid 
+rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 3px;
+    color: 
+#444444;
+}
+.close-nav button:hover {
+    color: 
+#222222;
+    background: 
+white;
+}
+
+.menu-bar button {
+    border: 1px solid 
+rgba(0, 0, 0, 0.1);
+    background: 
+#f7f7f7;
+    height: 50px;
+    width: 50px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.menu-bar i {
+    display: block;
+    border-top: 3px solid 
+#444444;
+    border-bottom: 3px solid 
+#444444;
+}
+.menu-bar i::after {
+    display: block;
+    content: "";
+    border-top: 3px solid 
+#444444;
+    margin: 6px 0;
+}
+.menu-bar button:hover {
+    background: 
+white;
+}
+.menu-bar button:hover i {
+    border-color: 
+#222222;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+@media (min-width: 550px) {
+    .navbar {
+        all: unset;
+        display: block;
+    }
+    .navbar ul {
+        flex-direction: row;
+        gap: 20px;
+    }
+    .navbar ul a {
+        font-size: inherit;
+    }
+    .close-nav,
+    .menu-bar {
+        display: none;
+    }
+}
+
+  .greeting-card{
+    padding: 30px;
+    border-radius: 3rem;
+    border-style:dashed;
+    border-color: #000000;
+    height: 10rem;
+    width: full;
+    font-size: 1.4rem;
+    margin: 20px 0 20px 0;
+  }
+  .content-card{
+    padding: 30px;
+    border-radius: 50px;
+    border: 4px solid #2A0F3F;
+    height: 10rem;
+    width: auto;
+    font-size: 1.2rem;
+    margin: 20px 0 20px 0;
+  }
+
+  @media screen and (min-width: 768px){
+    body{
+      margin: 0 40px 0 40px;
+    }
+  }
+
+  .button {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid white;
+    border-radius: 1000px;
+    padding: 10px 20px;
+    margin: 40px;
+    box-shadow: 0 2px 5px 0 rgba(3,6,26,0.15);
+    transition: .5s all ease-in-out;
+    &:hover {
+      cursor: pointer;
+      background: white;
+      color: #1F4141;
+      animation: none;
+
+    }
+  }
+
+  .button-pulse {
+    animation: pulse 2s infinite 3s cubic-bezier(0.25, 0, 0, 1);
+    box-shadow: 0 0 0 0 white;
+  }
+  @keyframes pulse {
+    to {
+      box-shadow: 0 0 0 18px rgba(255, 255, 255, 0); 
+    }
+  }
+
+  @media screen and (min-width: 768px){
+    .main-container{
+      display: flex;
+      flex-direction: column;
+      margin: 0 100px 0 100px;
+    }
+    .content-card {
+      height: 20rem;
+    }
+    .greeting-card{
+      height: 20rem;
+      font-size: 2rem;
+      padding: 3rem;
+    }
+  }
