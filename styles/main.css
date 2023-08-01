@@ -180,53 +180,56 @@ white;
     font-size: 1.4rem;
     margin: 20px 0 20px 0;
   }
-  /* .content-card{
-    display:grid;
-    grid-template-columns: repeat(1,1fr);
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    border-radius: 50px;
-    border: 4px solid #2A0F3F;
-    height: auto;
-    width: auto;
-    font-size: 1.2rem;
-    margin: 20px 0 20px 0;
-  } */
+
 
 
   .content-card {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: right;
     align-items: center;
     padding: 30px;
     border-radius: 50px;
     border: 4px solid #2A0F3F;
     height: auto;
     width: auto;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-family: Cormorant Garamond', 'serif';
     margin: 20px 0 20px 0;
     position: relative;
     overflow: hidden;
     cursor: pointer;
   }
   
-  .content-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
-    transform-origin: right center;
-    opacity: 0;
-    pointer-events: none;
-    border-radius: 50% 50px 50px 50%;
-  }
-  
-  .content-card:hover::before {
+  .content-card::before,
+.content-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform-origin: right center;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 0 50px 50px 0;
+}
+
+.content-card::after {
+  content: "Start";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #2A0F3F;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  padding-right: 20px; /* Add padding for spacing from the ripple */
+}
+.content-card:hover::before {
     animation: ripple 1.1s linear ;
   }
   
@@ -285,6 +288,8 @@ white;
       display: flex;
       flex-direction: column;
       margin: 0 100px 0 100px;
+      justify-content: center;
+      align-items: center;
     }
     .content-card {
     width: 75%;
@@ -294,6 +299,7 @@ white;
       justify-content: center;
     }
     .greeting-card{
+        width: 75%;
       height: 20rem;
       font-size: 2rem;
       padding: 3rem;
