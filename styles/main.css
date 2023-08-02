@@ -3,6 +3,7 @@ body{
     /* background-image: url("../assets/_.jpeg"); */
     margin: 0 10px 0 10px;
     background: linear-gradient(311deg, #5EC0DF 0%, #FFF 100%, rgba(255, 255, 255, 0.00) 100%);
+    background-size: cover;
     background-repeat: no-repeat;
 
 }
@@ -194,7 +195,7 @@ white;
     height: auto;
     width: auto;
     font-size: 1.4rem;
-    font-family: Cormorant Garamond', 'serif';
+    font-family: 'Cormorant Garamond', 'serif';
     margin: 20px 0 20px 0;
     position: relative;
     overflow: hidden;

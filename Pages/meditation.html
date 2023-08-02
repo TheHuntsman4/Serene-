@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/meditation.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="video-wrapper">
+        <video playsinline autoplay muted loop>
+            <source src="../assets/videos/test_bg.mp4">
+        </video>
+        <div class="input" style="z-index: 999;">
+            <label>Select Breaths</label>
+            <select name="breath-input">
+                <option value="3">3 Breaths</option>
+                <option value="5">5 Breaths</option>
+                <option value="7">7 Breaths</option>
+            </select>
+        </div>
+        <div class="circle-wrap">
+            <div class="circle-outline"></div>
+            <div class="circle-progress"></div>
+        </div>
+        <p class="breaths">Breaths Remaining: <span class="breaths-text">3</span></p>
+        <p class="instruction">Ready?</p>
+    </div>
+
+    <script src="../scripts/meditation.js"></script>
+</body>
+</html>
