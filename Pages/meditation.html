@@ -7,24 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="video-wrapper">
+    <div class="video-wrapper" style="z-index: -9999999;">
         <video playsinline autoplay muted loop>
             <source src="../assets/videos/test_bg.mp4">
-        </video>
-        <div class="input" style="z-index: 999;">
-            <label>Select Breaths</label>
-            <select name="breath-input">
-                <option value="3">3 Breaths</option>
-                <option value="5">5 Breaths</option>
-                <option value="7">7 Breaths</option>
-            </select>
-        </div>
-        <div class="circle-wrap">
-            <div class="circle-outline"></div>
-            <div class="circle-progress"></div>
-        </div>
-        <p class="breaths">Breaths Remaining: <span class="breaths-text">3</span></p>
-        <p class="instruction">Ready?</p>
+        </video> 
+        <div class="main" style="z-index: 999;">
+            <div class="input">
+                <label>Select Breaths</label>
+                <select class="breath-input">
+                  <option value="3">3 Breaths</option>
+                  <option value="5">5 Breaths</option>
+                  <option value="7">7 Breaths</option>
+                </select>
+              </div>
+              <div class="circle-wrap">
+                <div class="circle-outline"></div>
+                <div class="circle-progress"></div>
+              </div>
+              <p class="breaths">Breaths remaining: <span class="breaths-text">3</span></p>
+              <p class="instructions">Are you ready to start breathing?</p>
+              <button class="start">Begin</button>
     </div>
 
     <script src="../scripts/meditation.js"></script>
