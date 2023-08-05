@@ -5,6 +5,7 @@ const rewardButtons = document.querySelectorAll('.task-button');
 rewardButtons.forEach(button => {
   button.addEventListener('click', () => {
     const rewardText = button.querySelector('h2').textContent;
-    console.log(`Clicked on reward: ${rewardText}`);
+    localStorage.setItem('selectedReward', rewardText);
+    window.location.href = '../Pages/task_result.html'; // Redirect to the result page
   });
 });

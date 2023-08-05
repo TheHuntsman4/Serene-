@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selected Task and Reward</title>
+</head>
+<body>
+    <h1>Selected Task and Reward</h1>
+    <div>
+        <h2>Selected Task:</h2>
+        <p id="selectedTask"></p>
+    </div>
+    <div>
+        <h2>Selected Reward:</h2>
+        <p id="selectedReward"></p>
+    </div>
+    <script>
+        const selectedTask = localStorage.getItem('selectedTask');
+        const selectedReward = localStorage.getItem('selectedReward');
+
+        document.getElementById('selectedTask').textContent = selectedTask;
+        document.getElementById('selectedReward').textContent = selectedReward;
+
+        // Clear local storage after retrieving values
+        localStorage.removeItem('selectedTask');
+        localStorage.removeItem('selectedReward');
+    </script>
+</body>
+</html>
