@@ -1,6 +1,7 @@
 body{ 
     color: #000000;
     /* background-image: url("../assets/_.jpeg"); */
+    font-family: 'Open Sans', sans-serif;
     margin: 0 10px 0 10px;
     background: linear-gradient(311deg, #5EC0DF 0%, #FFF 100%, rgba(255, 255, 255, 0.00) 100%);
     background-size: cover;
@@ -29,8 +30,8 @@ html {
   padding: 0 15px;
 }
 .header-area {
-  background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.5)),
-  url(https://images.unsplash.com/photo-1528353518104-dbd48bee7bc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80);
+  background: transparent,
+  /* url(https://images.unsplash.com/photo-1528353518104-dbd48bee7bc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80); */
   background-position: center center;
   background-size: cover;
 }
@@ -39,8 +40,8 @@ html {
 
 /* navbar regular css start */
 .navbar-area {
-  background: rgba(0,0,0,.6);
-  border-bottom: 1px solid #000;
+  background: rgba(0,0,0,0);
+  border-bottom: 1px solid #ffffff;
 }
 .site-navbar {
   display: flex;
@@ -51,7 +52,7 @@ a.site-logo {
   font-size: 26px;
   font-weight: 800;
   text-transform: uppercase;
-  color: #fff;
+  color: #000000;
   text-decoration: none;
 }
 .site-navbar ul {
@@ -61,7 +62,7 @@ a.site-logo {
   display: flex;
 }
 .site-navbar ul li a {
-  color: #fff;
+  color: #000000;
   padding: 20px;
   display: block;
   text-decoration: none;
