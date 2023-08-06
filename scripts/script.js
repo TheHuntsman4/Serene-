@@ -1,21 +1,28 @@
-const theBody = document.querySelector('body');
-const openNav = document.querySelector('.menu-bar button');
-const closeNav = document.querySelector('.close-nav button');
-const Navbar = document.querySelector('.navbar');
+// define all UI variable
+const navToggler = document.querySelector('.nav-toggler');
+const navMenu = document.querySelector('.site-navbar ul');
+const navLinks = document.querySelectorAll('.site-navbar a');
 
-// function bodyScroll(){
-//     if(Navbar.classList.contains('show')){
-//         theBody.classList.add('hide-scroll');
-//     }
-//     else if(theBody.classList.contains('hide-scroll')){
-//         theBody.classList.remove('hide-scroll');
-//     }
-// }
+// load all event listners
+allEventListners();
 
-function showHide(){
-    Navbar.classList.toggle('show');
-    // bodyScroll();
+// functions of all event listners
+function allEventListners() {
+  // toggler icon click event
+  navToggler.addEventListener('click', togglerClick);
+  // nav links click event
+  navLinks.forEach( elem => elem.addEventListener('click', navLinkClick));
 }
 
-openNav.onclick = showHide;
-closeNav.onclick = showHide;
+// togglerClick function
+function togglerClick() {
+  navToggler.classList.toggle('toggler-open');
+  navMenu.classList.toggle('open');
+}
+
+// navLinkClick function
+function navLinkClick() {
+  if(navMenu.classList.contains('open')) {
+    navToggler.click();
+  }
+}
