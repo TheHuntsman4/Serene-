@@ -1,9 +1,10 @@
 body{ 
-    color: #000000;
+    color: #ffffff;
     /* background-image: url("../assets/_.jpeg"); */
     font-family: 'Open Sans', sans-serif;
-    margin: 0 10px 0 10px;
-    background: linear-gradient(311deg, #5EC0DF 0%, #FFF 100%, rgba(255, 255, 255, 0.00) 100%);
+    margin: 10px 20px 10px 20px;
+    background-color: black;
+    /* background: linear-gradient(311deg, #5EC0DF 0%, #FFF 100%, rgba(255, 255, 255, 0.00) 100%); */
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -40,7 +41,7 @@ html {
 
 /* navbar regular css start */
 .navbar-area {
-  background: rgba(0,0,0,0);
+  background: rgba(0, 0, 0, 0);
   border-bottom: 1px solid #ffffff;
 }
 .site-navbar {
@@ -52,7 +53,7 @@ a.site-logo {
   font-size: 26px;
   font-weight: 800;
   text-transform: uppercase;
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
 }
 .site-navbar ul {
@@ -62,7 +63,7 @@ a.site-logo {
   display: flex;
 }
 .site-navbar ul li a {
-  color: #000000;
+  color: #ffffff;
   padding: 20px;
   display: block;
   text-decoration: none;
@@ -180,7 +181,7 @@ a.site-logo {
 }
 /* mobile breakpoint end */
 
-  .greeting-card{
+  /* .greeting-card{
     padding: 30px;
     border-radius: 3rem;
     border-style:dashed;
@@ -238,7 +239,7 @@ a.site-logo {
   right: 0;
   transform: translateY(-50%);
   padding-right: 20px; /* Add padding for spacing from the ripple */
-}
+/* }
 .content-card:hover::before {
     animation: ripple 1.1s linear ;
   }
@@ -327,5 +328,40 @@ a.site-logo {
     background: #b621fe;
     border: none;
     z-index: 1;
-  }
+  }  */
   
+.main-div{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.landing {
+  position: relative; /* Needed for positioning the background image */
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/landing.png");
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.4; /* Adjust opacity as needed */
+  z-index: -1; /* Place the background behind other content */
+}
+
+.landing-content {
+  text-align: center;
+  font-size: 2rem;
+  z-index: -1;
+}
