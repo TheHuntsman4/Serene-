@@ -26,3 +26,19 @@ function navLinkClick() {
     navToggler.click();
   }
 }
+const music = new Audio("../assets/sounds/rain.mp3"); // Replace with your actual music file
+
+  const toggleMusicButton = document.getElementById("toggleMusicButton");
+  let isMusicPlaying = false;
+
+  toggleMusicButton.addEventListener("click", () => {
+    if (isMusicPlaying) {
+      music.pause();
+      isMusicPlaying = false;
+      toggleMusicButton.textContent = "Play Music";
+    } else {
+      music.play();
+      isMusicPlaying = true;
+      toggleMusicButton.textContent = "Pause Music";
+    }
+  });

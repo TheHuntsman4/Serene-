@@ -72,6 +72,20 @@ a.site-logo {
 .site-navbar ul li a:hover {
   background: rgba(255,255,255,.1);
 }
+
+.site-navbar ul li button {
+  background: transparent;
+  color: white;
+  outline: none;
+  box-shadow: none;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.site-navbar ul li button:hover {
+  background: rgba(255,255,255,.1);
+}
 /* navbar regular css end */
 
 
@@ -364,4 +378,83 @@ align-items: center;
   text-align: center;
   font-size: 2rem;
   z-index: -1;
+}
+
+.services {
+  width: 80%;
+  padding: 1rem;
+  position: relative;
+}
+
+
+.services-member {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.services-member{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-member-element{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+}
+
+.services-member-button{
+  height: 2rem;
+  width: 5rem;
+  background-color: #9BD770;
+  color: #8400FF;
+  border-radius: 50px;
+  text-align: center;
+  align-self: center;
+}
+
+.services::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15px; /* Adjust the height of the wavy border */
+  background: url('path-to-wavy-image.png') repeat-x center; /* Use a wavy image as the background */
+  transform: translateY(100%);
+  z-index: -1;
+}
+
+.custom-shape-divider-top-1691423606 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1691423606 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 175px;
+}
+
+.custom-shape-divider-top-1691423606 .shape-fill {
+  fill: #F5AA39;
+}
+
+@media (min-width:1024px){
+  .services-member{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+  }
 }
