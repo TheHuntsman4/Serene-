@@ -15,16 +15,26 @@
         <h2>Selected Reward:</h2>
         <p id="selectedReward"></p>
     </div>
+    <div>
+        <h2>Animation:</h2>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="../assets/svg/animation_ll376mo5.json" background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>
+    </div>
     <script>
         const selectedTask = localStorage.getItem('selectedTask');
         const selectedReward = localStorage.getItem('selectedReward');
+        const lottieSrc = localStorage.getItem('lottieSrc');
+        console.log(lottieSrc);
 
         document.getElementById('selectedTask').textContent = selectedTask;
         document.getElementById('selectedReward').textContent = selectedReward;
 
-        // Clear local storage after retrieving values
-        localStorage.removeItem('selectedTask');
-        localStorage.removeItem('selectedReward');
+        const lottiePlayer = document.getElementById('player');
+
+        // Listen for the 'load' event before setting the src attribute
+        lottiePlayer.addEventListener('load', () => {
+            lottiePlayer.setAttribute('src', lottieSrc);
+        });
+
     </script>
 </body>
 </html>
