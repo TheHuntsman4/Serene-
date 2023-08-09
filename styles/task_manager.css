@@ -2,7 +2,7 @@ body{
     color: #ffffff;
     /* background-image: url("../assets/_.jpeg"); */
     font-family: 'Open Sans', sans-serif;
-    margin: 0 7rem 0 7rem;
+    margin: 10px 20px 10px 20px;
     background-color: #008080;
     /* background: linear-gradient(311deg, #5EC0DF 0%, #FFF 100%, rgba(255, 255, 255, 0.00) 100%); */
     background-size: cover;
@@ -195,133 +195,10 @@ a.site-logo {
 }
 /* mobile breakpoint end */
   
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-  }
-  h1 {
-    margin: 0;
-    text-align: center;
-    font-size: 4rem;
-    overflow: hidden;
-    line-height: 1;
-  }
-  h1 span {
-    padding: 5rem 0 0 0;
-    display: block;
-    animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
-  }
-  
-  @keyframes reveal {
-    0% {
-      transform: translate(0%,-100%);
-    }
-    100% {
-      transform: translate(0,0);
-    }
-  }
-  .services-member-button{
-    height: 2rem;
-    width: 5rem;
-    background-color: #9BD770;
-    color: #8400FF;
-    border-radius: 50px;
-    border: 2px solid #8400FF;
-    text-align: center;
-    align-self: center;
-  }
-  .landing {
-    position: relative; /* Needed for positioning the background image */
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../assets/images/free.png");
-    background-position: center center;
-    background-size: cover;
-    opacity: 0.7; /* Adjust opacity as needed */
-    z-index: -1; /* Place the background behind other content */
-  }
-  
-  
-  .content-element {
-    height: 90vh;
-    position: relative;
-    background-image: url("../assets/landing.png");
-    background-position: center center;
-    background-size: cover;
-    opacity: 0.8; /* Adjust opacity as needed */
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    font-size: 16px;
-  }
-  
-  .content-title {
-    color: #fff; /* Adjust text color for readability */
-  }
-  
-  .content-description {
-    color: black; /* Adjust text color for readability */
-  }
-  
-  .content-element-options {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .services-member-button {
-    margin-top: 1rem;
-    width: 11rem;
-    height: 7rem;
-    padding: 0.5rem 1rem;
-    background-color: transparent; /* Adjust button background color */
-    color: #000; /* Adjust button text color */
-    border: 2px solid white;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .services-member-button:hover {
-    background-color: #000; /* Adjust hover background color */
-    color: #fff; /* Adjust hover text color */
-  }
-  .services-member-button a{
-    text-decoration: none;
-    color: white;
-    font-size:1.5rem;
-  }
-  .main-content{
+
+.task-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  @media  (min-width: 767px) {
-    .content-element{
-      height: 30vh;
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      justify-content: center;
-      align-items: center;
-    }
-    .button-box{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-  }
+}

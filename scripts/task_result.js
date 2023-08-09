@@ -1,15 +1,16 @@
-// Get all reward buttons
-const rewardButtons = document.querySelectorAll('.task-button');
+const selectedTask = localStorage.getItem('selectedTask');
+const selectedReward = localStorage.getItem('selectedReward');
+const lottieSrc = localStorage.getItem('lottieSrc');
+console.log(lottieSrc);
 
-// Event listener for reward button clicks
-rewardButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const rewardText = button.querySelector('h2').textContent;
-    const rewardlottieSrc = button.querySelector('lottie-player').getAttribute('src');
-    localStorage.setItem('rewardlottieSrc',rewardlottieSrc)
-    localStorage.setItem('selectedReward', rewardText);
-    window.location.href = '../Pages/task_result.html'; // Redirect to the result page
-  });
+document.getElementById('selectedTask').textContent = selectedTask;
+document.getElementById('selectedReward').textContent = selectedReward;
+
+const lottiePlayer = document.getElementById('player');
+
+// Listen for the 'load' event before setting the src attribute
+lottiePlayer.addEventListener('load', () => {
+    lottiePlayer.setAttribute('src', lottieSrc);
 });
 // define all UI variable
 const navToggler = document.querySelector('.nav-toggler');

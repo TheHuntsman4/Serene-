@@ -4,8 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selected Task and Reward</title>
+    <link rel="stylesheet" href="../styles/task_manager.css">
 </head>
+<header class="header-area">
+    <!-- site-navbar start -->
+    <div class="navbar-area">
+        <div class="container">
+            <nav class="site-navbar">
+                <!-- site logo -->
+                <a href="./main.html" class="site-logo">Serene</a>
+
+                <!-- site menu/nav -->
+                <ul>
+                    <li><a href="./main.html">home</a></li>
+                    <li><a href="./activities.html">Activities</a></li>
+                    <li><a href="./resources.html">Resources</a></li>
+                    <li><a href="./journal">Journal</a></li>
+                    <li><a id="toggleMusicButton">Toggle Music</a></li>
+                </ul>
+
+                <!-- nav-toggler for mobile version only -->
+                <button class="nav-toggler">
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </div><!-- navbar-area end -->
+</header>
 <body>
+    <div class="task-container">
     <h1>Selected Task and Reward</h1>
     <div>
         <h2>Selected Task:</h2>
@@ -16,25 +43,10 @@
         <p id="selectedReward"></p>
     </div>
     <div>
-        <h2>Animation:</h2>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="../assets/svg/animation_ll376mo5.json" background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>
     </div>
-    <script>
-        const selectedTask = localStorage.getItem('selectedTask');
-        const selectedReward = localStorage.getItem('selectedReward');
-        const lottieSrc = localStorage.getItem('lottieSrc');
-        console.log(lottieSrc);
-
-        document.getElementById('selectedTask').textContent = selectedTask;
-        document.getElementById('selectedReward').textContent = selectedReward;
-
-        const lottiePlayer = document.getElementById('player');
-
-        // Listen for the 'load' event before setting the src attribute
-        lottiePlayer.addEventListener('load', () => {
-            lottiePlayer.setAttribute('src', lottieSrc);
-        });
-
+</div>
+    <script src="../scripts/task_result.js">
     </script>
 </body>
 </html>
